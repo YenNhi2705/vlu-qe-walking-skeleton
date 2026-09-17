@@ -1,4 +1,4 @@
-name: Jest Unit Test
+name: Jest Tests
 
 on:
   push:
@@ -10,21 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Lấy code từ repository
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Cài đặt Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 24
 
-      # Cài đặt các package
       - name: Install dependencies
         run: npm install
 
-      # Chạy Jest Unit Test
       - name: Run Jest tests
         run: npm test
