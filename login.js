@@ -1,7 +1,7 @@
 // Hàm kiểm tra đăng nhập
 function login(username, password) {
     // Nếu username là admin và password là 123 thì trả về true
-    if (username === "admin" && password === "1234") {
+    if (username === "admin" && password === "123") {
         return true;
     }
 
